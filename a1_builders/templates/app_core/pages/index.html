@@ -1,0 +1,55 @@
+{% extends "app_core/base.html" %}
+
+{% load static %}
+
+{% block head_title %}{{ block.super }} Home{% endblock head_title %}
+
+{% block extra_styles %}{% endblock extra_styles %}
+
+{% block content %}
+
+<h1>A1 Builders Construction</h1>
+<br>
+<p>Esta es la seccion content de la pagina</p>
+
+<!-- start Banner -->
+    {% include 'app_core/snippets/banner3.html' %}
+<!-- end Banner -->
+
+<!-- start About -->
+    {% include 'app_core/snippets/about.html' %}
+<!-- end About -->
+
+<!-- start Counters -->
+    {% include 'app_core/snippets/counters.html' %}
+<!-- end Counters -->
+
+<!-- start Services -->
+    {% include 'app_core/snippets/services.html' %}
+<!-- end Services -->
+
+<!-- start Partners -->
+    {% include 'app_core/snippets/partners.html' %}
+<!-- end Partners -->
+
+<!-- start Gallery -->
+    {% include 'app_core/snippets/gallery.html' %}
+<!-- end Gallery -->
+
+{% if about.image_google %}
+    <!-- start Google Business -->
+        {% include 'app_core/snippets/google_business.html' %}
+    <!-- end Google Business -->
+{% endif %}
+
+<!-- start Testimonios -->
+    {% include 'app_core/snippets/testimonials.html' %}
+<!-- end Testimonios -->
+
+<!-- start Social Media -->
+    {% include 'app_core/snippets/social_media.html' %}
+<!-- end Social Media -->
+
+{% endblock content %}
+
+{% block extra_javascript %}{% endblock extra_javascript %}

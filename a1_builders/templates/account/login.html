@@ -1,0 +1,62 @@
+{% extends "account/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{{ block.super }}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<!-- My Account Section Start -->
+<div class="rs-my-account pt-120 pb-120 md-pt-80 md-pb-80">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 md-mb-50">
+				<h2 class="title pb-30 md-pb-15">Login</h2>
+				<div class="rs-login">
+					<form method="POST" action="{% url 'account_login' %}">
+						{% csrf_token %}
+						<div class="form-group mb-30">
+							<label>Username or email address<span>*</span></label>
+							<input id="fname" name="login" class="form-control-mod" type="text" required="">
+							<label>Password <span>*</span></label>
+							<input id="tname" name="password" class="form-control-mod" type="password" required="">
+						</div>
+						{% if form.errors %}
+						{% for field in form %}
+						{% for error in field.errors %}
+						<div class="alert alert-danger">
+							<strong>{{ error|escape }}</strong>
+						</div>
+						{% endfor %}
+						{% endfor %}
+						{% for error in form.non_field_errors %}
+						<div class="alert alert-danger">
+							<strong>{{ error|escape }}</strong>
+						</div>
+						{% endfor %}
+						{% endif %}
+						<button class="add-btn" type="submit">Log In</button>
+						<!-- <label>
+							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme"
+								type="checkbox" id="rememberme" value="forever">
+							<span>Remember me</span>
+						</label> -->
+						<div class="last-password pt-30">
+							<a href="{% url 'app_core:index' %}">
+								Back to home <i class="fa fa-home"></i>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-6" style="text-align: center;">
+				<!-- <h2 class="title pb-30 md-pb-15">Register</h2> -->
+				<img src="{% static 'app_core/assets/images/contact/login.webp' %}" alt="Images" style="width: 80%;">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- My Account Section Start -->
+
+{% endblock content %}

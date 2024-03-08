@@ -1,0 +1,74 @@
+{% extends "account/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{{ block.super }}{% trans "Logout" %}{% endblock %}
+
+{% block content %}
+
+<!-- My Account Section Start -->
+<div class="rs-my-account pt-120 pb-120 md-pt-80 md-pb-80">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 md-mb-50">
+				<h2 class="title pb-30 md-pb-15 text-center">Logout</h2>
+				<div class="rs-login">
+					<form method="POST" action="{% url 'account_logout' %}">
+						{% csrf_token %}
+                        {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+
+                        <span class="login100-form-logo d-flex justify-content-center align-items-center mt-4 mt-md-0">
+                            <img src="{% static 'app_user/images/user.png' %}" class="imgroundcorners" alt="John Doe">
+                         </span>
+                         <h3 style="padding: 15px 15px; text-align: center;">
+                            {% trans 'Are you sure you want to sign out?' %}
+                         </h3>
+						{% if form.errors %}
+						{% for field in form %}
+						{% for error in field.errors %}
+						<div class="alert alert-danger">
+							<strong>{{ error|escape }}</strong>
+						</div>
+						{% endfor %}
+						{% endfor %}
+						{% for error in form.non_field_errors %}
+						<div class="alert alert-danger">
+							<strong>{{ error|escape }}</strong>
+						</div>
+						{% endfor %}
+						{% endif %}
+
+                        <div class="row">
+                            <div class="col-12 p-0 input-group justify-content-center align-items-center">
+                               <button class="add-btn mr-4" style="text-transform: capitalize;"><i class="icon-login"></i>{% trans 'Sign Out' %}</button>
+                               <a id="back-link" class="btn btn-dark" style="text-transform: capitalize;">Back</a>
+                            </div>
+                        </div>
+
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-6" style="text-align: center;">
+				<!-- <h2 class="title pb-30 md-pb-15">Register</h2> -->
+				<img src="{% static 'app_core/assets/images/contact/login.webp' %}" alt="Images" style="width: 80%;">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- My Account Section Start -->
+
+{% endblock content %}
+
+{% block extra_javascript %}
+<script>
+   var element = document.getElementById('back-link');
+   element.setAttribute('href', document.referrer);
+   element.onclick = function () {
+      history.back();
+      return false;
+   }
+</script>
+{% endblock extra_javascript %}
