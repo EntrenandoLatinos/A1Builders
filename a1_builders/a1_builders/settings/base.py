@@ -35,6 +35,7 @@ THIRD_APSS = [
     'allauth.account',
     'allauth.socialaccount',
     'ckeditor',
+    'livereload',
 ]
 
 LOCAL_APPS = [
@@ -52,7 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "allauth.account.middleware.AccountMiddleware",
+    # "allauth.account.middleware.AccountMiddleware",
+    'livereload.middleware.LiveReloadScript',
 ]
 
 CKEDITOR_CONFIGS = {
@@ -113,7 +115,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env/')]
@@ -133,7 +134,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-ACCOUNT_EMAIL_SUBJECT_PREFIX = '¡Dvine Roofing! - '
+ACCOUNT_EMAIL_SUBJECT_PREFIX = '¡A1 Builders! - '
 LOGIN_URL = 'account_login'
 LOGIN_REDIRECT_URL = 'app_user:login-redirect'
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
