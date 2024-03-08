@@ -3,7 +3,7 @@ __pycache__/
 *.pyc
 
 # JetBrains IDE
-.idea/
+# .idea/
 
 #App migrations and media folders
 a1_builders/app_core/migrations/
