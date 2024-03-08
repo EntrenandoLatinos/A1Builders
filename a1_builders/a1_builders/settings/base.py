@@ -35,7 +35,7 @@ THIRD_APSS = [
     'allauth.account',
     'allauth.socialaccount',
     'ckeditor',
-    # 'livereload',
+    'livereload',
 ]
 
 LOCAL_APPS = [
@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "allauth.account.middleware.AccountMiddleware",
-    # 'livereload.middleware.LiveReloadScript',
+    'livereload.middleware.LiveReloadScript',
 ]
 
 CKEDITOR_CONFIGS = {
