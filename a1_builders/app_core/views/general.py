@@ -1,8 +1,12 @@
+import logging
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from app_core.models import Contact, Banner, About, Skill, Counter, Service, SubService, WorkImage, Testimonial, \
     Partner, Faq, Privacy, SocialMedia
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 
 def index(request):
