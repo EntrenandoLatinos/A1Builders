@@ -1,0 +1,20 @@
+# Archivos de caché
+__pycache__/
+*.pyc
+
+# JetBrains IDE
+.idea/
+
+#App migrations and media folders
+a1_builders/app_core/migrations/
+a1_builders/app_user/migrations/
+a1_builders/media/
+a1_builders/static/
+
+# Archivos de migraciones
+migrations/*
+*_initial.py
+
+# Base de datos SQLite
+*.sqlite3
+*.db
