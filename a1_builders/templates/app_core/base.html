@@ -1,11 +1,240 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A1</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+    <meta name="description" content="Industry - Factory & Industrial HTML Template" />
+    <meta property="og:title" content="Industry - Factory & Industrial HTML Template" />
+    <meta property="og:description" content="Industry - Factory & Industrial HTML Template" />
+    <meta property="og:image" content="https://industry.dexignzone.com/xhtml/social-image.png" />
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" href="{% static 'app_core/images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'app_core/images/favicon.png' %}" />
+
+    <!-- PAGE TITLE HERE -->
+    <title>{% block head_title %}A1 Builders | {% endblock head_title %}</title>
+
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'app_core/css/plugins.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app_core/css/style.min.css' %}">
+    <link class="skin" rel="stylesheet" type="text/css" href="{% static 'app_core/css/skin/skin-7.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app_core/css/templete.min.css' %}">
+    <!-- Google Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+    </style>
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'app_core/plugins/revolution/revolution/css/revolution.min.css' %}">
+
 </head>
-<body>
-    {% block content %}{% endblock content %}
+
+<body id="bg">
+    <div class="page-wraper">
+        <div id="loading-area"></div>
+
+        <!-- start Header -->
+        {% include 'app_core/snippets/header.html' %}
+        <!-- end Header -->
+
+        <!-- Content -->
+        <div class="page-content bg-white">
+
+            {% block content_banner %}{% endblock content_banner %}
+
+            <!-- contact area -->
+            <div class="content-block">
+
+                {% block content %}{% endblock content %}
+
+            </div>
+            <!-- contact area END -->
+        </div>
+        <!-- Content END -->
+        <!-- Footer -->
+            {% include 'app_core/snippets/footer.html' %}
+        <!-- Footer END -->
+        <button class="scroltop style1 white icon-up" type="button"><i class="fa fa-arrow-up"></i></button>
+    </div>
+    <!-- JAVASCRIPT FILES ========================================= -->
+    <script src="{% static 'app_core/js/jquery.min.js' %}"></script><!-- JQUERY.MIN JS -->
+    <script src="{% static 'app_core/plugins/wow/wow.js' %}"></script><!-- WOW JS -->
+    <script src="{% static 'app_core/plugins/bootstrap/js/popper.min.js' %}"></script><!-- BOOTSTRAP.MIN JS -->
+    <script src="{% static 'app_core/plugins/bootstrap/js/bootstrap.min.js' %}"></script><!-- BOOTSTRAP.MIN JS -->
+    <script src="{% static 'app_core/plugins/bootstrap-select/bootstrap-select.min.js' %}"></script><!-- FORM JS -->
+    <script src="{% static 'app_core/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js' %}"></script>
+    <!-- FORM JS -->
+    <script src="{% static 'app_core/plugins/magnific-popup/magnific-popup.js' %}"></script><!-- MAGNIFIC POPUP JS -->
+    <script src="{% static 'app_core/plugins/counter/waypoints-min.js' %}"></script><!-- WAYPOINTS JS -->
+    <script src="{% static 'app_core/plugins/counter/counterup.min.js' %}"></script><!-- COUNTERUP JS -->
+    <script src="{% static 'app_core/plugins/imagesloaded/imagesloaded.js' %}"></script><!-- IMAGESLOADED -->
+    <script src="{% static 'app_core/plugins/masonry/masonry-3.1.4.js' %}"></script><!-- MASONRY -->
+    <script src="{% static 'app_core/plugins/masonry/masonry.filter.js' %}"></script><!-- MASONRY -->
+    <script src="{% static 'app_core/plugins/owl-carousel/owl.carousel.js' %}"></script><!-- OWL SLIDER -->
+    <script src="{% static 'app_core/plugins/lightgallery/js/lightgallery-all.min.js' %}"></script><!-- Lightgallery -->
+    <script src="{% static 'app_core/js/custom.js' %}"></script><!-- CUSTOM FUCTIONS  -->
+    <script src="{% static 'app_core/js/dz.carousel.min.js' %}"></script><!-- SORTCODE FUCTIONS  -->
+    <script src="{% static 'app_core/plugins/countdown/jquery.countdown.js' %}"></script><!-- COUNTDOWN FUCTIONS  -->
+    <script src="{% static 'app_core/js/dz.ajax.js' %}"></script><!-- CONTACT JS  -->
+    <script src="{% static 'app_core/plugins/rangeslider/rangeslider.js' %}"></script><!-- Rangeslider -->
+
+    <script src="{% static 'app_core/js/jquery.lazy.min.js' %}"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="{% static 'app_core/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'app_core/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script
+        src="{% static 'app_core/plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script
+        src="{% static 'app_core/plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+    <script
+        src="{% static 'app_core/plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script
+        src="{% static 'app_core/plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script
+        src="{% static 'app_core/plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script
+        src="{% static 'app_core/plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <script
+        src="{% static 'app_core/plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script
+        src="{% static 'app_core/plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <script src="{% static 'app_core/js/rev.slider.js' %}"></script>
+    <script>
+        Industry.handleMasonryFilter();
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+            'use strict';
+            dz_rev_slider_15();
+            $('.lazy').Lazy();
+        });	/*ready*/
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            var sync1 = $("#sync1");
+            var sync2 = $("#sync2");
+            var slidesPerPage = 4; //globaly define number of elements per page
+            var syncedSecondary = true;
+
+            sync1.owlCarousel({
+                items: 1,
+                nav: true,
+                autoplaySpeed: 3000,
+                navSpeed: 3000,
+                paginationSpeed: 3000,
+                slideSpeed: 3000,
+                smartSpeed: 3000,
+                autoplay: 3000,
+                dots: false,
+                loop: true,
+                responsiveRefreshRate: 200,
+                navText: ['<i class="la la-angle-left"></i>', '<i class="la la-angle-right"></i>'],
+            }).on('changed.owl.carousel', syncPosition);
+
+            sync2.on('initialized.owl.carousel', function () {
+                sync2.find(".owl-item").eq(0).addClass("current");
+            }).owlCarousel({
+                items: slidesPerPage,
+                dots: false,
+                nav: false,
+                margin: 20,
+                autoplaySpeed: 3000,
+                navSpeed: 3000,
+                paginationSpeed: 3000,
+                slideSpeed: 3000,
+                smartSpeed: 3000,
+                autoplay: 3000,
+                slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+                responsiveRefreshRate: 100,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    480: {
+                        items: 2
+                    },
+                    768: {
+                        items: 3
+                    },
+                    1024: {
+                        items: 4
+                    },
+                    1400: {
+                        items: 4
+                    }
+                }
+            }).on('changed.owl.carousel', syncPosition2);
+
+            function syncPosition(el) {
+                //if you set loop to false, you have to restore this next line
+                //var current = el.item.index;
+
+                //if you disable loop you have to comment this block
+                var count = el.item.count - 1;
+                var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+
+                if (current < 0) {
+                    current = count;
+                }
+                if (current > count) {
+                    current = 0;
+                }
+
+                //end block
+
+                sync2
+                    .find(".owl-item")
+                    .removeClass("current")
+                    .eq(current)
+                    .addClass("current");
+                var onscreen = sync2.find('.owl-item.active').length - 1;
+                var start = sync2.find('.owl-item.active').first().index();
+                var end = sync2.find('.owl-item.active').last().index();
+
+                if (current > end) {
+                    sync2.data('owl.carousel').to(current, 100, true);
+                }
+                if (current < start) {
+                    sync2.data('owl.carousel').to(current - onscreen, 100, true);
+                }
+            }
+
+            function syncPosition2(el) {
+                if (syncedSecondary) {
+                    var number = el.item.index;
+                    sync1.data('owl.carousel').to(number, 100, true);
+                }
+            }
+
+            sync2.on("click", ".owl-item", function (e) {
+                e.preventDefault();
+                var number = $(this).index();
+                //sync1.data('owl.carousel').to(number, 300, true);
+
+                sync1.data('owl.carousel').to(number, 300, true);
+
+            });
+        });
+    </script>
 </body>
+
 </html>
