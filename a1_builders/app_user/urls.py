@@ -70,6 +70,26 @@ urlpatterns = [
         name='subservice_update'
     ),
     path(
+        'administrator/reviews_index/',
+        administrator.reviews_index,
+        name='reviews_index'
+    ),
+    path(
+        'administrator/google_business/',
+        administrator.google_business,
+        name='google_business'
+    ),
+    path(
+        'administrator/google_business_create/',
+        administrator.google_business_create,
+        name='google_business_create'
+    ),
+    path(
+        'administrator/google_business_update/<int:pk>/',
+        administrator.google_business_update,
+        name='google_business_update'
+    ),
+    path(
         'administrator/testimonials/',
         administrator.testimonials,
         name='testimonials'

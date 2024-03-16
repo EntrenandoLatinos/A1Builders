@@ -13,12 +13,22 @@
 <!-- end Banner Works -->
 
 <!-- start Gallery -->
-    {% include 'app_core/snippets/gallery.html' %}
+    {% include 'app_core/snippets/gallery2.html' %}
 <!-- end Gallery -->
 
-<!-- start Social Media -->
-    {% include 'app_core/snippets/social_media.html' %}
-<!-- end Social Media -->
+<!-- start Service Sections -->
+{% include 'app_core/snippets/services_sections.html' %}
+<!-- end Service Sections -->
+
+{% if about.image_google %}
+    <!-- start Google Business -->
+        {% include 'app_core/snippets/google_business.html' %}
+    <!-- end Google Business -->
+{% endif %}
+
+<!-- start Partners -->
+    {% include 'app_core/snippets/partners.html' %}
+<!-- end Partners -->
 
 {% endblock content %}
 

@@ -28,6 +28,15 @@ SOCIAL_MEDIA_CHOICES = [
     ('06', 'LinkedIn'),
 ]
 
+STARS_REVIEW_CHOICES = [
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+]
+
+
 # Create your models here.
 class AuditoriaFecha(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
@@ -35,6 +44,7 @@ class AuditoriaFecha(models.Model):
 
     class Meta:
         abstract = True
+
 
 class Contact(AuditoriaFecha):
     location = models.CharField("Location", max_length=300, null=True, blank=True)
@@ -46,11 +56,12 @@ class Contact(AuditoriaFecha):
 
     def __str__(self):
         return "{0}".format(str(self.email))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'Contact'
         verbose_name_plural = 'Contacts'
+
 
 class Banner(AuditoriaFecha):
     image = models.ImageField(upload_to='banner/', null=True, blank=True)
@@ -62,12 +73,13 @@ class Banner(AuditoriaFecha):
 
     def __str__(self):
         return "{0}".format(str(self.title))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'Banner'
         verbose_name_plural = 'Banners'
-    
+
+
 class About(AuditoriaFecha):
     image = models.ImageField(upload_to='about/', null=True, blank=True)
     about = RichTextField("About", null=True, blank=True)
@@ -78,12 +90,13 @@ class About(AuditoriaFecha):
 
     def __str__(self):
         return "{0}".format(str(self.id))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'About'
         verbose_name_plural = 'Abouts'
-    
+
+
 class Skill(AuditoriaFecha):
     title1 = models.CharField("Skill title 1", max_length=300, null=True, blank=True)
     description1 = models.TextField("Description 1", null=True, blank=True)
@@ -94,12 +107,13 @@ class Skill(AuditoriaFecha):
 
     def __str__(self):
         return "{0}".format(str(self.title1))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'Skill'
         verbose_name_plural = 'Skills'
-    
+
+
 class Counter(AuditoriaFecha):
     title1 = models.CharField("Title 1", max_length=300, null=True, blank=True)
     number1 = models.IntegerField("Number 1", null=True, blank=True)
@@ -116,11 +130,12 @@ class Counter(AuditoriaFecha):
 
     def __str__(self):
         return "{0}".format(str(self.title1))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'Counter'
         verbose_name_plural = 'Counters'
+
 
 class Service(AuditoriaFecha):
     image = models.ImageField(upload_to='service/', null=True, blank=True)
@@ -131,12 +146,13 @@ class Service(AuditoriaFecha):
 
     def __str__(self):
         return "{0}".format(str(self.title))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'Service'
         verbose_name_plural = 'Services'
-    
+
+
 class SubService(AuditoriaFecha):
     service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='service_subservice')
     image = models.ImageField(upload_to='subservice/', null=True, blank=True)
@@ -145,12 +161,13 @@ class SubService(AuditoriaFecha):
 
     def __str__(self):
         return "{0}".format(str(self.title))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'SubService'
         verbose_name_plural = 'SubServices'
-    
+
+
 class WorkImage(AuditoriaFecha):
     category = models.CharField("Category", null=True, blank=True, max_length=2, choices=CATEGORY_CHOICES)
     title = models.CharField("Image title", max_length=300, null=True, blank=True)
@@ -159,17 +176,17 @@ class WorkImage(AuditoriaFecha):
 
     def __str__(self):
         return "{0}".format(str(self.title))
-    
+
     def bytes_to_mb(self, bytes):
         mb = bytes / 1000000
         return mb
-    
+
     def save(self, *args, **kwargs):
         if not self._state.adding:
             super().save(*args, **kwargs)
             return
         super().save(*args, **kwargs)
-        
+
         img = Image.open(self.image.path)
         # Obtiene el tamaño de la imagen en bytes
         image_size = os.path.getsize(self.image.path)
@@ -197,71 +214,79 @@ class WorkImage(AuditoriaFecha):
         verbose_name = 'WorkImage'
         verbose_name_plural = 'WorkImages'
 
+
 @receiver(pre_delete, sender=WorkImage)
 def delete_gallery_image(sender, instance, **kwargs):
     file_path = instance.image.path
     if os.path.exists(file_path):
         os.remove(file_path)
-    
+
+
 class Testimonial(AuditoriaFecha):
     image = models.ImageField(upload_to='testimonial/', null=True, blank=True)
     name = models.CharField("Name", max_length=300, null=True, blank=True)
     location = models.CharField("Location", max_length=300, null=True, blank=True)
+    stars = models.CharField("Stars", max_length=1, choices=STARS_REVIEW_CHOICES, null=True, blank=True)
+    url = models.URLField("URL", null=True, blank=True)
     description = models.TextField("Description", null=True, blank=True)
 
     def __str__(self):
         return "{0}".format(str(self.name))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'Testimonial'
         verbose_name_plural = 'Testimonials'
-    
+
+
 class Partner(AuditoriaFecha):
     image = models.ImageField(upload_to='partner/', null=True, blank=True)
     url = models.URLField("URL", null=True, blank=True)
 
     def __str__(self):
         return "{0}".format(str(self.id))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'Partner'
         verbose_name_plural = 'Partners'
-    
+
+
 class Faq(AuditoriaFecha):
     title = models.CharField("Title", max_length=300, null=True, blank=True)
     description = RichTextField("Description", null=True, blank=True)
 
     def __str__(self):
         return "{0}".format(str(self.title))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'Faq'
         verbose_name_plural = 'Faqs'
-    
+
+
 class Privacy(AuditoriaFecha):
     title = models.CharField("Title", max_length=300, null=True, blank=True)
     description = RichTextField("Description", null=True, blank=True)
 
     def __str__(self):
         return "{0}".format(str(self.title))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'Privacy'
         verbose_name_plural = 'Privacies'
-    
+
+
 class SocialMedia(AuditoriaFecha):
     name = models.CharField("Name", max_length=2, choices=SOCIAL_MEDIA_CHOICES)
     url = models.URLField("URL")
     icon_class = models.CharField("Icon class", max_length=150)
-    icon_class_footer = models.CharField("Icon class footer" ,max_length=150)
+    icon_class_footer = models.CharField("Icon class footer", max_length=150)
 
     def __str__(self):
         return "{0}".format(str(self.get_name_display()))
-    
+
     class Meta:
         ordering = ['id']
         verbose_name = 'SocialMedia'
