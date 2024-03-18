@@ -36,18 +36,18 @@
                     <ul>
                         <li>
                             <i class="la la-phone"></i>
-                            <h4 class="title">(+00)888.666.88</h4>
+                            <h4 class="title" id="contactPhone"></h4>
                             <span>Free Call</span>
                         </li>
                         <li>
                             <i class="la la-clock-o"></i>
-                            <h4 class="title">08:00 AM - 06:00 PM</h4>
+                            <h4 class="title">07:00 AM - 07:00 PM</h4>
                             <span>Monday - Friday</span>
                         </li>
                         <li>
                             <i class="la la-map"></i>
-                            <h4 class="title">183 Donato Parkways</h4>
-                            <span>CA, United State</span>
+                            <h4 class="title">{{contact.location}}</h4>
+                            <span>{{contact.city}}</span>
                         </li>
                     </ul>
                 </div>
@@ -95,6 +95,9 @@
                         <a href="{% url 'app_core:index' %}"><img src="{% static 'app_core/images/logo6.webp' %}" alt=""></a>
                     </div>
                     <ul class="nav navbar-nav">	
+                        <div id="element_logo_header_sticky">
+                            <img src="{% static 'app_core/images/logo.png' %}" id="logo_header_sticky" alt="" style="max-width: 50%; padding-top: 6px; visibility: hidden;">
+                        </div>
                         <li class="has-mega-menu"> 
                             <a href="{% url 'app_core:index' %}">Home</a>
                         </li>
@@ -104,9 +107,9 @@
                         <li>
                             <a href="javascript:;">Services<i class="fa fa-chevron-down"></i></a>
                             <ul class="sub-menu">
-                                <li><a href="javascript:;">Roofing</a></li>
-                                <li><a href="javascript:;">Siding</a></li>
-                                <li><a href="javascript:;">Gutter</a></li>
+                                {% for servicio in servicios %}
+                                    <li><a href="{% url 'app_core:services_view' servicio.id %}">{{servicio.title}}</a></li>
+                                {% endfor %}
                             </ul>
                         </li>
                         <li class="has-mega-menu"> 

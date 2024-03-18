@@ -1,2 +1,77 @@
 {% load static %}
 
+<div class="content-area">
+    <div class="container max-w900">
+        <!-- blog start -->
+        <div class="blog-post blog-single">
+            <div class="col-lg-12 section-head text-center">
+                <div class=" clearfix">
+                    <h2 class="title">{{ servicio.title }}</h2>
+                </div>
+
+                <div class="dlab-separator-outer ">
+                    <div class="dlab-separator bg-primary style-icon text-white radius-xl"><i class="fa fa-leaf"></i>
+                    </div>
+                </div>
+            </div>
+
+            {% if servicio.image_large %}
+                <div class="dlab-post-media dlab-img-effect zoom-slow">
+                    <a href="blog-single.html"><img src="{{ servicio.image_large.url }}" alt=""></a>
+                </div>
+            {% endif %}
+
+            <div class="dlab-post-text">
+                {{ servicio.description|safe }}
+                <blockquote>
+                    {{ servicio.description_finish|safe }}
+                </blockquote>
+
+                {% for subservice in subservicios %}
+                    {% if not forloop.counter|divisibleby:"2" %}
+                        <div class="col-lg-12 section-head text-center" style="margin-bottom: 0;">
+                            <div class=" clearfix">
+                                <h3 style="text-align: center;">{{ subservice.title }}</h3>
+                            </div>
+
+                            <div class="dlab-separator-outer ">
+                                <div class="dlab-separator bg-primary style-icon text-white radius-xl"><i
+                                        class="fa fa-leaf"></i></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="alignleft" width="600"
+                                     src="{{ subservice.image.url }}" alt="">
+                            </div>
+                            <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
+                                <p>{{ subservice.description|safe }}</p>
+                            </div>
+                        </div>
+                        <div class="dlab-divider bg-gray-dark"></div>
+                    {% else %}
+                        <div class="col-lg-12 section-head text-center" style="margin-bottom: 0;">
+                            <div class=" clearfix">
+                                <h3 style="text-align: center;">{{ subservice.title }}</h3>
+                            </div>
+                            <div class="dlab-separator-outer m-t0 m-b20">
+                                <div class="dlab-separator bg-primary style-skew"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="alignright" width="600"
+                                     src="{{ subservice.image.url }}" alt="">
+                            </div>
+                            <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
+                                <p>{{ subservice.description|safe }}</p>
+                            </div>
+                        </div>
+                        <div class="dlab-divider bg-gray-dark"></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <!-- blog END -->
+    </div>
+</div>

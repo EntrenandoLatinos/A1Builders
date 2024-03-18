@@ -5,62 +5,25 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="sort-title clearfix text-center">
-                    <h4>Event post Carousel</h4>
+                    <h4>Services</h4>
                 </div>
                 <!-- Event post Carousel with no margin -->
                 <div class="section-content box-sort-in m-b30 button-example">
                     <div class="blog-carousel owl-loaded owl-theme owl-carousel mfp-gallery gallery owl-btn-center-lr owl-btn-2">
-                        <div class="dlab-box m-b30 dlab-team4">
-                            <div class="dlab-media">
-                                <a href="javascript:;">
-                                    <img alt="" src="{% static 'app_core/images/our-team/team-bx/pic1.jpg' %}">
-                                </a>
+
+                        {% for service in servicios %}
+                            <div class="dlab-box m-b30 dlab-team4">
+                                <div class="dlab-media">
+                                    <a href="javascript:;">
+                                        <img alt="" src="{{ service.image.url }}">
+                                    </a>
+                                </div>
+                                <div class="dlab-info">
+                                    <h4 class="dlab-title"><a href="javascript:;">{{ service.title }}</a></h4>
+                                </div>
                             </div>
-                            <div class="dlab-info">
-                                <h4 class="dlab-title"><a href="javascript:;">Roofing</a></h4>
-                            </div>
-                        </div>
-                        <div class="dlab-box m-b30 dlab-team4">
-                            <div class="dlab-media">
-                                <a href="javascript:;">
-                                    <img alt="" src="{% static 'app_core/images/our-team/team-bx/pic1.jpg' %}">
-                                </a>
-                            </div>
-                            <div class="dlab-info">
-                                <h4 class="dlab-title"><a href="javascript:;">Gutter</a></h4>
-                            </div>
-                        </div>
-                        <div class="dlab-box m-b30 dlab-team4">
-                            <div class="dlab-media">
-                                <a href="javascript:;">
-                                    <img alt="" src="{% static 'app_core/images/our-team/team-bx/pic1.jpg' %}">
-                                </a>
-                            </div>
-                            <div class="dlab-info">
-                                <h4 class="dlab-title"><a href="javascript:;">Siding</a></h4>
-                            </div>
-                        </div>
-                        <div class="dlab-box m-b30 dlab-team4">
-                            <div class="dlab-media">
-                                <a href="javascript:;">
-                                    <img alt="" src="{% static 'app_core/images/our-team/team-bx/pic1.jpg' %}">
-                                </a>
-                            </div>
-                            <div class="dlab-info">
-                                <h4 class="dlab-title"><a href="javascript:;">Windows</a></h4>
-                            </div>
-                        </div>
-                        <div class="dlab-box m-b30 dlab-team4">
-                            <div class="dlab-media">
-                                <a href="javascript:;">
-                                    <img alt="" src="{% static 'app_core/images/our-team/team-bx/pic1.jpg' %}">
-                                </a>
-                            </div>
-                            <div class="dlab-info">
-                                <h4 class="dlab-title"><a href="javascript:;">Remodeling</a></h4>
-                            </div>
-                        </div>
-                        
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>

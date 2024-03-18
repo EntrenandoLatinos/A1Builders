@@ -1,0 +1,61 @@
+{% load static %}
+
+<!-- About Services info -->
+<div class="section-full content-inner bg-white video-section"
+     style="background-image:url('images/background/bg-video.png');">
+    <div class="container">
+        <div class="section-content">
+            <div class="row d-flex">
+                <div class="col-lg-6 col-md-12 m-b30">
+                    <div class="video-bx">
+                        <img src="{{ about.image.url }}" alt="Signature">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 m-b30 align-self-center video-infobx">
+                    <div class="content-bx1">
+                        <h2 class="m-b15 title">A company involved in<br><span class="text-primary"> construction.</span>
+                        </h2>
+                        <p class="m-b30">{{ about.about|safe }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Services info END -->
+
+<!-- Services -->
+<!-- contact area -->
+        <div class="content-block">
+			<!-- Services -->
+			<div class="section-full">
+				<div class="row spno about-industry">
+					
+					<div class="col-lg-4 bg-primary text-white">
+						<div class="service-box style2">
+							<div>
+								<h2 class="title">Mision</h2>
+								<p>{{ about.mision|safe }}</p>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="col-lg-4">
+						<img src="{{ about.image_mission_vision.url }}" alt="" class="img-cover">
+					</div>
+                    
+					<div class="col-lg-4 bg-primary text-white">
+						<div class="service-box style2">
+							<div>
+								<h2 class="title text-black">Vision</h2>
+								<p>{{ about.vision|safe }}</p>
+							</div>
+						</div>
+					</div>
+                    
+				</div>
+			</div>
+			<!-- Services END -->
+		</div>
+		<!-- contact area END -->
+<!-- Services END -->
