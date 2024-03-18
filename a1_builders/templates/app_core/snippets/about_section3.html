@@ -8,12 +8,15 @@
             <div class="row d-flex">
                 <div class="col-lg-6 col-md-12 m-b30">
                     <div class="video-bx">
-                        <img src="{{ about.image.url }}" alt="Signature">
+                        {% if about.image %}
+                            <img src="{{ about.image.url }}" alt="Signature">
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 m-b30 align-self-center video-infobx">
                     <div class="content-bx1">
-                        <h2 class="m-b15 title">A company involved in<br><span class="text-primary"> construction.</span>
+                        <h2 class="m-b15 title">A company involved in<br><span
+                                class="text-primary"> construction.</span>
                         </h2>
                         <p class="m-b30">{{ about.about|safe }}</p>
                     </div>
@@ -26,36 +29,38 @@
 
 <!-- Services -->
 <!-- contact area -->
-        <div class="content-block">
-			<!-- Services -->
-			<div class="section-full">
-				<div class="row spno about-industry">
-					
-					<div class="col-lg-4 bg-primary text-white">
-						<div class="service-box style2">
-							<div>
-								<h2 class="title">Mision</h2>
-								<p>{{ about.mision|safe }}</p>
-							</div>
-						</div>
-					</div>
-                    
-					<div class="col-lg-4">
-						<img src="{{ about.image_mission_vision.url }}" alt="" class="img-cover">
-					</div>
-                    
-					<div class="col-lg-4 bg-primary text-white">
-						<div class="service-box style2">
-							<div>
-								<h2 class="title text-black">Vision</h2>
-								<p>{{ about.vision|safe }}</p>
-							</div>
-						</div>
-					</div>
-                    
-				</div>
-			</div>
-			<!-- Services END -->
-		</div>
-		<!-- contact area END -->
+<div class="content-block">
+    <!-- Services -->
+    <div class="section-full">
+        <div class="row spno about-industry">
+
+            <div class="col-lg-4 bg-primary">
+                <div class="service-box style2" style="background-color: #f5f3f3">
+                    <div>
+                        <h2 class="title">Mision</h2>
+                        <p>>{{ about.mision|safe }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                {% if about.image_mission_vision %}
+                    <img src="{{ about.image_mission_vision.url }}" alt="" class="img-cover">
+                {% endif %}
+            </div>
+
+            <div class="col-lg-4 bg-primary">
+                <div class="service-box style2" style="background-color: #f5f3f3">
+                    <div>
+                        <h2 class="title text-black">Vision</h2>
+                        <p class="" style="color: white">{{ about.vision|safe }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Services END -->
+</div>
+<!-- contact area END -->
 <!-- Services END -->

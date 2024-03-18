@@ -13,7 +13,9 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 m-b30 our-story-thum">
-                <img src="{{ about.image.url }}" class="radius-sm" alt="">
+                {% if about.image %}
+                	<img src="{{ about.image.url }}" class="radius-sm" alt="">
+                {% endif %}                 
             </div>
         </div>
     </div>
