@@ -8,27 +8,29 @@
 
 {% block content %}
 
-<!-- start Banner Works -->
+    <!-- start Banner Works -->
     {% include 'app_core/snippets/banner_works.html' %}
-<!-- end Banner Works -->
+    <!-- end Banner Works -->
 
-<!-- start Gallery -->
+    <!-- start Gallery -->
     {% include 'app_core/snippets/gallery2.html' %}
-<!-- end Gallery -->
+    <!-- end Gallery -->
 
-<!-- start Service Sections -->
+    <!-- start Service Sections -->
+    {% comment %}
 {% include 'app_core/snippets/services_sections.html' %}
-<!-- end Service Sections -->
+ {% endcomment %}
+    <!-- end Service Sections -->
 
-{% if about.image_google %}
-    <!-- start Google Business -->
+    {% if about.image_google %}
+        <!-- start Google Business -->
         {% include 'app_core/snippets/google_business.html' %}
-    <!-- end Google Business -->
-{% endif %}
+        <!-- end Google Business -->
+    {% endif %}
 
-<!-- start Partners -->
+    <!-- start Partners -->
     {% include 'app_core/snippets/partners.html' %}
-<!-- end Partners -->
+    <!-- end Partners -->
 
 {% endblock content %}
 

@@ -17,7 +17,7 @@
 
             {% if servicio.image_large %}
                 <div class="dlab-post-media dlab-img-effect zoom-slow">
-                    <a href="blog-single.html"><img src="{{ servicio.image_large.url }}" alt=""></a>
+                    <a href="javascript:;"><img src="{{ servicio.image_large.url }}" alt=""></a>
                 </div>
             {% endif %}
 
@@ -29,6 +29,7 @@
 
                 {% for subservice in subservicios %}
                     {% if not forloop.counter|divisibleby:"2" %}
+
                         <div class="col-lg-12 section-head text-center" style="margin-bottom: 0;">
                             <div class=" clearfix">
                                 <h3 style="text-align: center;">{{ subservice.title }}</h3>
@@ -43,14 +44,16 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <img class="alignleft" width="600"
-                                     src="{{ subservice.image.url }}" alt="">
+                                     src="{{ subservice.image.url }}" alt="" style="border-radius: 10%">
                             </div>
                             <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
                                 <p>{{ subservice.description|safe }}</p>
                             </div>
                         </div>
                         <div class="dlab-divider bg-gray-dark"></div>
+
                     {% else %}
+
                         <div class="col-lg-12 section-head text-center" style="margin-bottom: 0;">
                             <div class=" clearfix">
                                 <h3 style="text-align: center;">{{ subservice.title }}</h3>
@@ -62,15 +65,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <img class="alignright" width="600"
-                                     src="{{ subservice.image.url }}" alt="">
-                            </div>
                             <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
                                 <p>{{ subservice.description|safe }}</p>
                             </div>
+                            <div class="col-md-6">
+                                <img class="alignright" width="600"
+                                     src="{{ subservice.image.url }}" alt="" style="border-radius: 10%">
+                            </div>
                         </div>
                         <div class="dlab-divider bg-gray-dark"></div>
+
                     {% endif %}
                 {% endfor %}
             </div>

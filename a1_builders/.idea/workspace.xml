@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19c0ea14-d18c-418d-99be-0da130d05f4e" name="Changes" comment="" />
+    <list default="true" id="19c0ea14-d18c-418d-99be-0da130d05f4e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/a1_builders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/a1_builders.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_builders/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/a1_builders/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_core/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_core/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/pages/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/pages/works.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/pages/works.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/about_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/about_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/about_section3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/about_section3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/gallery2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/gallery2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/services_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/services_detail.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,25 +39,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "last_opened_file_path": "/home/latinosdev2/Entrenando-Latinos/usa_building/3.Desarrollo/x-repo/UsaBuilding/usa_building",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/latinosdev2/Entrenando-Latinos/usa_building/3.Desarrollo/x-repo/UsaBuilding/usa_building&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/app_core/snippets" />
@@ -58,7 +73,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.10 (a1-venv)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />

@@ -29,102 +29,25 @@
             </div>
             <div class="clearfix">
                 <ul id="masonry1" class="dlab-gallery-listing gallery text-center sp10">
-                    
-                    <li class="card-container m-b10 col-lg-6 nature">
-                        <div class="dlab-media dlab-img-overlay1 dlab-img-effect">
-                            <img src="{% static 'app_core/images/gallery/filters/pic1.jpg' %}" alt="" width="800"
-                                 height="650"/>
-                            <div class="overlay-bx">
-                                <div class="overlay-icon"> 
-                                    <span data-exthumbimage="{% static 'app_core/images/gallery/filters/pic1.jpg' %}"
-                                          data-src="{% static 'app_core/images/gallery/filters/pic1.jpg' %}"
-                                          class="check-km" title="Image 1 Title will come here">		
+
+                    {% for work in works %}
+                        <li class="card-container m-b10 col-lg-6 nature">
+                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect">
+                                <img src="{{ work.image.url }}" alt="" width="800"
+                                     height="650"/>
+                                <div class="overlay-bx">
+                                    <div class="overlay-icon"> 
+                                    <span data-exthumbimage="{{ work.image.url }}"
+                                          data-src="{{ work.image.url }}"
+                                          class="check-km" title="{{ work.title }}">		
                                         <i class="ti-zoom-in icon-bx-xs"></i> 
                                     </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    
-                    <li class="card-container m-b10 col-lg-6 animal">
-                        <div class="dlab-media dlab-img-overlay1 dlab-img-effect">
-                            <img src="{% static 'app_core/images/gallery/filters/pic2.jpg' %}" alt="" width="800"
-                                 height="650"/>
-                            <div class="overlay-bx">
-                                <div class="overlay-icon"> 
-                                    <span data-exthumbimage="{% static 'app_core/images/gallery/filters/pic2.jpg' %}"
-                                          data-src="{% static 'app_core/images/gallery/filters/pic2.jpg' %}"
-                                          class="check-km" title="Image 2 Title will come here">		
-                                        <i class="ti-zoom-in icon-bx-xs"></i> 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="card-container m-b10 col-lg-6 animal">
-                        <div class="dlab-media dlab-img-overlay1 dlab-img-effect">
-                            <img src="{% static 'app_core/images/gallery/filters/pic3.jpg' %}" alt="" width="800"
-                                 height="650"/>
-                            <div class="overlay-bx">
-                                <div class="overlay-icon"> 
-                                    <span data-exthumbimage="{% static 'app_core/images/gallery/filters/pic3.jpg' %}"
-                                          data-src="{% static 'app_core/images/gallery/filters/pic3.jpg' %}"
-                                          class="check-km" title="Image 3 Title will come here">		
-                                        <i class="ti-zoom-in icon-bx-xs"></i> 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="card-container m-b10 col-lg-6 fashion">
-                        <div class="dlab-media dlab-img-overlay1 dlab-img-effect">
-                            <img src="{% static 'app_core/images/gallery/filters/pic4.jpg' %}" alt="" width="800"
-                                 height="650"/>
-                            <div class="overlay-bx">
-                                <div class="overlay-icon"> 
-                                    <span data-exthumbimage="{% static 'app_core/images/gallery/filters/pic4.jpg' %}"
-                                          data-src="{% static 'app_core/images/gallery/filters/pic4.jpg' %}"
-                                          class="check-km" title="Image 4 Title will come here">		
-                                        <i class="ti-zoom-in icon-bx-xs"></i> 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="card-container m-b10 col-lg-6 nature">
-                        <div class="dlab-media dlab-img-overlay1 dlab-img-effect">
-                            <img src="{% static 'app_core/images/gallery/filters/pic5.jpg' %}" alt="" width="800"
-                                 height="650"/>
-                            <div class="overlay-bx">
-                                <div class="overlay-icon"> 
-                                    <span data-exthumbimage="{% static 'app_core/images/gallery/filters/pic5.jpg' %}"
-                                          data-src="{% static 'app_core/images/gallery/filters/pic5.jpg' %}"
-                                          class="check-km" title="Image 5 Title will come here">		
-                                        <i class="ti-zoom-in icon-bx-xs"></i> 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="card-container m-b10 col-lg-6 woman">
-                        <div class="dlab-media dlab-img-overlay1 dlab-img-effect">
-                            <img src="{% static 'app_core/images/gallery/filters/pic6.jpg' %}" alt="" width="800"
-                                 height="650"/>
-                            <div class="overlay-bx">
-                                <div class="overlay-icon"> 
-                                    <span data-exthumbimage="{% static 'app_core/images/gallery/filters/pic6.jpg' %}"
-                                          data-src="{% static 'app_core/images/gallery/filters/pic6.jpg' %}"
-                                          class="check-km" title="Image 6 Title will come here">		
-                                        <i class="ti-zoom-in icon-bx-xs"></i> 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    {% endfor %}
+
 
                 </ul>
             </div>
