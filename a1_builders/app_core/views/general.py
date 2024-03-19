@@ -56,6 +56,7 @@ def about(request):
     testimonials = Testimonial.objects.all().order_by('?')
     social_media = SocialMedia.objects.all()
     works = WorkImage.objects.all().order_by('?')[:1]
+    partners = Partner.objects.all()
     context = {
         'contact': contact,
         'servicios': servicios,
@@ -64,7 +65,8 @@ def about(request):
         'skills': skills,
         'testimonials': testimonials,
         'works': works,
-        'social_media': social_media
+        'social_media': social_media,
+        'partners': partners
     }
     if request.method == 'POST':
         if 'stay_connected' in request.POST:
@@ -112,13 +114,15 @@ def services_view(request, pk):
     subservicios = SubService.objects.filter(service=pk)
     works = WorkImage.objects.all().order_by('?')[:1]
     social_media = SocialMedia.objects.all()
+    testimonials = Testimonial.objects.all().order_by('?')
     context = {
         'contact': contact,
         'servicio': servicio,
         'servicios': servicios,
         'subservicios': subservicios,
         'works': works,
-        'social_media': social_media
+        'social_media': social_media,
+        'testimonials': testimonials
     }
     if request.method == 'POST':
         if 'stay_connected' in request.POST:

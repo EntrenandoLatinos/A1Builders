@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19c0ea14-d18c-418d-99be-0da130d05f4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/a1_builders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/a1_builders.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a1_builders/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/a1_builders/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_core/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_core/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app_core/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/pages/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app_core/pages/works.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/pages/works.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/about_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/about_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/about_section3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/about_section3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/gallery2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/gallery2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/services_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/services_detail.html" afterDir="false" />
-    </list>
+    <list default="true" id="19c0ea14-d18c-418d-99be-0da130d05f4e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
