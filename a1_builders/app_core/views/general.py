@@ -238,12 +238,16 @@ def privacy(request):
     privacy = Privacy.objects.all().last()
     social_media = SocialMedia.objects.all()
     works = WorkImage.objects.all().order_by('?')[:1]
+    testimonials = Testimonial.objects.all().order_by('?')
+    partners = Partner.objects.all()
     context = {
         'contact': contact,
         'servicios': servicios,
         'privacy': privacy,
         'social_media': social_media,
-        'works': works
+        'works': works,
+        'testimonials': testimonials,
+        'partners': partners
     }
     if request.method == 'POST':
         if 'stay_connected' in request.POST:
