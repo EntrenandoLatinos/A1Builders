@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19c0ea14-d18c-418d-99be-0da130d05f4e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "cbm__dev",
-    "last_opened_file_path": "/home/latinosdev2/Entrenando-Latinos/usa_building/3.Desarrollo/x-repo/UsaBuilding/usa_building",
+    "last_opened_file_path": "/home/latinosdev2/Entrenando-Latinos/amazing_roofing/3.Development/x-repo/Amazing/amazing",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -103,6 +103,7 @@
       <workItem from="1710739779021" duration="7509000" />
       <workItem from="1710775703898" duration="967000" />
       <workItem from="1710940854169" duration="2291000" />
+      <workItem from="1710951291842" duration="2707000" />
     </task>
     <servers />
   </component>
