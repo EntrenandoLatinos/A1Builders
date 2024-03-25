@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19c0ea14-d18c-418d-99be-0da130d05f4e" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a1_builders/settings/development.py" beforeDir="false" afterPath="$PROJECT_DIR$/a1_builders/settings/development.py" afterDir="false" />
@@ -15,6 +16,9 @@
       <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/banner_privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/banner_privacy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/faq_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/faq_section.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +46,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "django.template.preview.state": "SHOW_EDITOR",
+<<<<<<< Updated upstream
     "git-widget-placeholder": "cbm__dev",
     "last_opened_file_path": "/home/latinosdev2/Entrenando-Latinos/jap_roofing/3.Development/x-repo/JAP/jap",
+=======
+    "last_opened_file_path": "/home/cbm/ideafix/Entrenando-Latinos/alpha-roofing/3.Desarrollo./x-repo/AlphaRoofing/alpha",
+>>>>>>> Stashed changes
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -51,7 +59,11 @@
     "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+<<<<<<< Updated upstream
     "settings.editor.selected.configurable": "preferences.editor",
+=======
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
+>>>>>>> Stashed changes
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -89,7 +101,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
       </set>
     </attachedChunks>
   </component>
@@ -110,11 +122,15 @@
       <workItem from="1710714325621" duration="5292000" />
       <workItem from="1710739779021" duration="7509000" />
       <workItem from="1710775703898" duration="967000" />
+<<<<<<< Updated upstream
       <workItem from="1710940854169" duration="2291000" />
       <workItem from="1710951291842" duration="2707000" />
       <workItem from="1711027481395" duration="4719000" />
       <workItem from="1711035278272" duration="11000" />
       <workItem from="1711035304731" duration="6834000" />
+=======
+      <workItem from="1711083215088" duration="732000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
