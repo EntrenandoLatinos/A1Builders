@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19c0ea14-d18c-418d-99be-0da130d05f4e" name="Changes" comment="">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a1_builders/settings/development.py" beforeDir="false" afterPath="$PROJECT_DIR$/a1_builders/settings/development.py" afterDir="false" />
@@ -16,6 +17,9 @@
       <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/banner_privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/banner_privacy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/faq_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/faq_section.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 >>>>>>> Stashed changes
@@ -48,9 +52,13 @@
     "django.template.preview.state": "SHOW_EDITOR",
 <<<<<<< Updated upstream
     "git-widget-placeholder": "cbm__dev",
+<<<<<<< Updated upstream
     "last_opened_file_path": "/home/latinosdev2/Entrenando-Latinos/jap_roofing/3.Development/x-repo/JAP/jap",
 =======
     "last_opened_file_path": "/home/cbm/ideafix/Entrenando-Latinos/alpha-roofing/3.Desarrollo./x-repo/AlphaRoofing/alpha",
+>>>>>>> Stashed changes
+=======
+    "last_opened_file_path": "/home/latinosdev2/Entrenando-Latinos/alpha_roofing/3.Development/x-repo/AlphaRoofing/alpha",
 >>>>>>> Stashed changes
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
@@ -127,9 +135,13 @@
       <workItem from="1710951291842" duration="2707000" />
       <workItem from="1711027481395" duration="4719000" />
       <workItem from="1711035278272" duration="11000" />
+<<<<<<< Updated upstream
       <workItem from="1711035304731" duration="6834000" />
 =======
       <workItem from="1711083215088" duration="732000" />
+>>>>>>> Stashed changes
+=======
+      <workItem from="1711035304731" duration="10502000" />
 >>>>>>> Stashed changes
     </task>
     <servers />
