@@ -6,49 +6,49 @@
 
 {% block extra_styles %}{% endblock extra_styles %}
 
+{% block content_banner %}
+
+    <!-- start Header -->
+    {% include 'app_core/snippets/banner.html' %}
+    <!-- end Header -->
+
+{% endblock content_banner %}
+
 {% block content %}
 
-<h1 class="text-capitalize text-info">A1 Builders Construction</h1>
-<br>
-<p>This is the content section of the webpage A1 Builders</p>
+    <!-- start About Us -->
+    {% include 'app_core/snippets/about_section.html' %}
+    <!-- end About Us -->
 
-<!-- start Banner -->
-    {% include 'app_core/snippets/banner3.html' %}
-<!-- end Banner -->
-
-<!-- start About -->
-    {% include 'app_core/snippets/about.html' %}
-<!-- end About -->
-
-<!-- start Counters -->
-    {% include 'app_core/snippets/counters.html' %}
-<!-- end Counters -->
-
-<!-- start Services -->
-    {% include 'app_core/snippets/services.html' %}
-<!-- end Services -->
-
-<!-- start Partners -->
-    {% include 'app_core/snippets/partners.html' %}
-<!-- end Partners -->
-
-<!-- start Gallery -->
-    {% include 'app_core/snippets/gallery.html' %}
-<!-- end Gallery -->
-
-{% if about.image_google %}
-    <!-- start Google Business -->
-        {% include 'app_core/snippets/google_business.html' %}
-    <!-- end Google Business -->
-{% endif %}
-
-<!-- start Testimonios -->
-    {% include 'app_core/snippets/testimonials.html' %}
-<!-- end Testimonios -->
-
-<!-- start Social Media -->
+    <!-- start Social Media -->
     {% include 'app_core/snippets/social_media.html' %}
-<!-- end Social Media -->
+    <!-- end Social Media -->
+
+    <!-- start Services -->
+    {% include 'app_core/snippets/services3.html' %}
+    <!-- end Services -->
+
+    <!-- start Counters -->
+    {% include 'app_core/snippets/counters.html' %}
+    <!-- end Counters -->
+
+    <!-- start Gallery -->
+    {% include 'app_core/snippets/gallery.html' %}
+    <!-- end Gallery -->
+
+    <!-- start Testimonios -->
+    {% include 'app_core/snippets/testimonials.html' %}
+    <!-- end Testimonios -->
+
+    {% if about.image_google %}
+        <!-- start Google Business -->
+        {% include 'app_core/snippets/google_business.html' %}
+        <!-- end Google Business -->
+    {% endif %}
+
+    <!-- start Partners -->
+    {% include 'app_core/snippets/partners.html' %}
+    <!-- end Partners -->
 
 {% endblock content %}
 

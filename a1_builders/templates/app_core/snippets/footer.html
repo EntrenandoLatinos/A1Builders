@@ -1,2 +1,98 @@
 {% load static %}
 
+<!-- Footer -->
+<footer class="site-footer footer-gray-1 style1">
+    <!-- newsletter part -->
+    <div class="dlab-newsletter">
+        <div class="container">
+            <div class="ft-contact wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
+                <div class="ft-contact-bx">
+                    <img src="{% static 'app_core/images/icon/icon1.png' %}" alt=""/>
+                    <h4 class="title">Address</h4>
+                    <p>{{ contact.location }}, <br> {{ contact.city }}</p>
+                </div>
+                <div class="ft-contact-bx">
+                    <img src="{% static 'app_core/images/icon/icon2.png' %}" alt=""/>
+                    <h4 class="title">Phone</h4>
+                    <p id="contactPhone"></p>
+                </div>
+                <div class="ft-contact-bx">
+                    <img src="{% static 'app_core/images/icon/icon3.png' %}" alt=""/>
+                    <h4 class="title">Email Contact</h4>
+                    <p>{{ contact.email }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer top part -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="widget border-0">
+                        <h6 class="m-b20 text-white font-weight-300 text-uppercase">Quick Links</h6>
+                        <ul class="list-2">
+                            <li><a href="{% url 'app_core:about' %}">About Us</a></li>
+                            <li><a href="{% url 'app_user:works' %}">Works</a></li>
+                            <li><a href="{% url 'app_core:faq' %}">Faqs</a></li>
+                            <li><a href="{% url 'app_core:contact' %}">Contact</a></li>
+                            <li><a href="{% url 'app_core:privacy' %}">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="widget">
+                        <h6 class="m-b20 text-white font-weight-300 text-uppercase">Subscribe</h6>
+                        <div class="subscribe-form m-b20 m-t30">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <input name="userEmail" class="form-control radius-no" placeholder="Your Email"
+                                           type="email" required>
+                                    <span class="input-group-btn">
+                                        <button name="stay_connected" type="submit"
+                                                class="site-button btnhover20 radius-no">SEND</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <h6 class="m-b10 text-white font-weight-300 text-uppercase">Connect with us</h6>
+                        <ul class="list-inline m-a0">
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 facebook sharp"><i
+                                    class="fa fa-facebook"></i></a></li>
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 google-plus sharp"><i
+                                    class="fa fa-google-plus"></i></a></li>
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 linkedin sharp"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 instagram sharp"><i
+                                    class="fa fa-instagram"></i></a></li>
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 twitter sharp"><i
+                                    class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 col-sm-12 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="icon-bx-wraper bx-style-1 m-b15 p-a30 radius-sm br-col-w1 bg-tpw1">
+                        <h5 class="text-white font-weight-300">{{ about.about|safe|truncatewords:31 }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer bottom part -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row" style="padding: 10px 0;">
+                <div class="col-md-6 col-sm-6 text-left "><span>Copyright © <span id="yearValue"></span><a
+                        href="javascript:;">A1 Builders</a> all rights reserved.</span></div>
+                <div class="col-md-6 col-sm-6 text-right ">
+                    <div class="widget-link ">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer END -->

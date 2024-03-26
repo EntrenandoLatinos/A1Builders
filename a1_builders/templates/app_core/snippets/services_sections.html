@@ -1,0 +1,33 @@
+{% load static %}
+
+<div class="section-full bg-white content-inner" style="padding-bottom: 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sort-title clearfix text-center">
+                    <h4>Services</h4>
+                </div>
+                <!-- Event post Carousel with no margin -->
+                <div class="section-content box-sort-in m-b30 button-example">
+                    <div class="blog-carousel owl-loaded owl-theme owl-carousel mfp-gallery gallery owl-btn-center-lr owl-btn-2">
+
+                        {% for service in servicios %}
+                            <div class="dlab-box m-b30 dlab-team4">
+                                <div class="dlab-media">
+                                    <a href="javascript:;">
+                                        <img alt="" src="{{ service.image.url }}">
+                                    </a>
+                                </div>
+                                <div class="dlab-info">
+                                    <h4 class="dlab-title"><a href="javascript:;">{{ service.title }}</a></h4>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Event post Carousel with no margin END -->
+</div>

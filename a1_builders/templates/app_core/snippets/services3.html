@@ -1,2 +1,44 @@
 {% load static %}
 
+<!-- Content -->
+<div class="page-content bg-white">
+    <!-- contact area -->
+    <div class="content-area">
+        <div class="container max-w900">
+
+            {% for service in servicios %}
+
+                <!-- Blog large img -->
+                <div class="blog-post blog-lg blog-rounded">
+                    <div class="dlab-post-media dlab-img-effect zoom-slow">
+                        <a href="{% url 'app_core:services_view' service.pk %}">
+                            <img src="{{ service.image_large.url }}" alt="{{ service.title }}">
+                        </a>
+                    </div>
+                    <div class="dlab-info p-a25 border-1">
+                        <div class="dlab-post-meta">
+                        </div>
+                        <div class="dlab-post-title">
+                            <h4 class="post-title"><a
+                                    href="{% url 'app_core:services_view' service.pk %}">{{ service.title }}</a></h4>
+                        </div>
+                        <div class="dlab-post-text">
+                            <p>{{ service.description|safe }}</p>
+                        </div>
+                        <div class="dlab-post-readmore">
+                            <a href="{% url 'app_core:services_view' service.pk %}" title="READ MORE" rel="bookmark"
+                               class="site-button">READ MORE
+                                <i class="ti-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog large img END -->
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+<!-- Content END-->
+

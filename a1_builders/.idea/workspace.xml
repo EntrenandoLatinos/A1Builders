@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19c0ea14-d18c-418d-99be-0da130d05f4e" name="Changes" comment="" />
+    <list default="true" id="19c0ea14-d18c-418d-99be-0da130d05f4e" name="Changes" comment="">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_builders/settings/development.py" beforeDir="false" afterPath="$PROJECT_DIR$/a1_builders/settings/development.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_core/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_core/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/pages/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/pages/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/pages/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/pages/privacy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/banner_privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/banner_privacy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/faq_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/faq_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app_core/snippets/footer.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,29 +43,73 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/cbm/ideafix/Entrenando-Latinos/a1_builders/3.Desarrollo./x-repo/A1Builders/a1_builders&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+<<<<<<< Updated upstream
+    "git-widget-placeholder": "cbm__dev",
+<<<<<<< Updated upstream
+    "last_opened_file_path": "/home/latinosdev2/Entrenando-Latinos/jap_roofing/3.Development/x-repo/JAP/jap",
+=======
+    "last_opened_file_path": "/home/cbm/ideafix/Entrenando-Latinos/alpha-roofing/3.Desarrollo./x-repo/AlphaRoofing/alpha",
+>>>>>>> Stashed changes
+=======
+    "last_opened_file_path": "/home/latinosdev2/Entrenando-Latinos/alpha_roofing/3.Development/x-repo/AlphaRoofing/alpha",
+>>>>>>> Stashed changes
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+<<<<<<< Updated upstream
+    "settings.editor.selected.configurable": "preferences.editor",
+=======
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
+>>>>>>> Stashed changes
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/app_core/snippets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="a1_Builders" type="Python.DjangoServer" factoryName="Django server">
+      <module name="a1_builders" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
       </set>
     </attachedChunks>
   </component>
@@ -60,10 +123,41 @@
       <updated>1709924212659</updated>
       <workItem from="1709924214010" duration="5455000" />
       <workItem from="1709930271095" duration="216000" />
+      <workItem from="1709993810651" duration="4249000" />
+      <workItem from="1710425289751" duration="9762000" />
+      <workItem from="1710516653692" duration="3869000" />
+      <workItem from="1710599294672" duration="1208000" />
+      <workItem from="1710714325621" duration="5292000" />
+      <workItem from="1710739779021" duration="7509000" />
+      <workItem from="1710775703898" duration="967000" />
+<<<<<<< Updated upstream
+      <workItem from="1710940854169" duration="2291000" />
+      <workItem from="1710951291842" duration="2707000" />
+      <workItem from="1711027481395" duration="4719000" />
+      <workItem from="1711035278272" duration="11000" />
+<<<<<<< Updated upstream
+      <workItem from="1711035304731" duration="6834000" />
+=======
+      <workItem from="1711083215088" duration="732000" />
+>>>>>>> Stashed changes
+=======
+      <workItem from="1711035304731" duration="10502000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

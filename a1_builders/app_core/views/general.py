@@ -17,7 +17,7 @@ def index(request):
     indicators = Counter.objects.all().last()
     servicios = Service.objects.all()
     works = WorkImage.objects.all().order_by('?')[:6]
-    testimonials = Testimonial.objects.all()
+    testimonials = Testimonial.objects.all().order_by('?')
     partners = Partner.objects.all()
     social_media = SocialMedia.objects.all()
     context = {
@@ -35,12 +35,8 @@ def index(request):
 
     if request.method == 'POST':
         if 'stay_connected' in request.POST:
-            username = request.POST.get('userName')
-            company = request.POST.get('companyName')
-            email = request.POST.get('email')
-
-            # y enviar el correo electrónico correspondiente
-            send_msg_stay_connected(username, company, email)
+            email = request.POST.get('userEmail')
+            send_msg_stay_connected(email)
             return render(request, 'app_core/pages/index.html', context)
     else:
         # Renderizar el template con ambos formularios
@@ -53,9 +49,10 @@ def about(request):
     skills = Skill.objects.all().last()
     servicios = Service.objects.all()
     indicators = Counter.objects.all().last()
-    testimonials = Testimonial.objects.all()
+    testimonials = Testimonial.objects.all().order_by('?')
     social_media = SocialMedia.objects.all()
     works = WorkImage.objects.all().order_by('?')[:1]
+    partners = Partner.objects.all()
     context = {
         'contact': contact,
         'servicios': servicios,
@@ -64,16 +61,13 @@ def about(request):
         'skills': skills,
         'testimonials': testimonials,
         'works': works,
-        'social_media': social_media
+        'social_media': social_media,
+        'partners': partners
     }
     if request.method == 'POST':
         if 'stay_connected' in request.POST:
-            username = request.POST.get('userName')
-            company = request.POST.get('companyName')
-            email = request.POST.get('email')
-
-            # y enviar el correo electrónico correspondiente
-            send_msg_stay_connected(username, company, email)
+            email = request.POST.get('userEmail')
+            send_msg_stay_connected(email)
             return render(request, 'app_core/pages/about.html', context)
     else:
         # Renderizar el template con ambos formularios
@@ -93,12 +87,8 @@ def services(request):
     }
     if request.method == 'POST':
         if 'stay_connected' in request.POST:
-            username = request.POST.get('userName')
-            company = request.POST.get('companyName')
-            email = request.POST.get('email')
-
-            # y enviar el correo electrónico correspondiente
-            send_msg_stay_connected(username, company, email)
+            email = request.POST.get('userEmail')
+            send_msg_stay_connected(email)
             return render(request, 'app_core/pages/services.html', context)
     else:
         # Renderizar el template con ambos formularios
@@ -112,22 +102,20 @@ def services_view(request, pk):
     subservicios = SubService.objects.filter(service=pk)
     works = WorkImage.objects.all().order_by('?')[:1]
     social_media = SocialMedia.objects.all()
+    testimonials = Testimonial.objects.all().order_by('?')
     context = {
         'contact': contact,
         'servicio': servicio,
         'servicios': servicios,
         'subservicios': subservicios,
         'works': works,
-        'social_media': social_media
+        'social_media': social_media,
+        'testimonials': testimonials
     }
     if request.method == 'POST':
         if 'stay_connected' in request.POST:
-            username = request.POST.get('userName')
-            company = request.POST.get('companyName')
-            email = request.POST.get('email')
-
-            # y enviar el correo electrónico correspondiente
-            send_msg_stay_connected(username, company, email)
+            email = request.POST.get('userEmail')
+            send_msg_stay_connected(email)
             return render(request, 'app_core/pages/service.html', context)
     else:
         # Renderizar el template con ambos formularios
@@ -139,20 +127,18 @@ def works(request):
     servicios = Service.objects.all()
     gallery = WorkImage.objects.all().order_by('?')
     social_media = SocialMedia.objects.all()
+    about = About.objects.all().last()
     context = {
         'contact': contact,
         'servicios': servicios,
         'works': gallery,
+        'about': about,
         'social_media': social_media
     }
     if request.method == 'POST':
         if 'stay_connected' in request.POST:
-            username = request.POST.get('userName')
-            company = request.POST.get('companyName')
-            email = request.POST.get('email')
-
-            # y enviar el correo electrónico correspondiente
-            send_msg_stay_connected(username, company, email)
+            email = request.POST.get('userEmail')
+            send_msg_stay_connected(email)
             return render(request, 'app_core/pages/works.html', context)
     else:
         # Renderizar el template con ambos formularios
@@ -174,12 +160,8 @@ def faq(request):
     }
     if request.method == 'POST':
         if 'stay_connected' in request.POST:
-            username = request.POST.get('userName')
-            company = request.POST.get('companyName')
-            email = request.POST.get('email')
-
-            # y enviar el correo electrónico correspondiente
-            send_msg_stay_connected(username, company, email)
+            email = request.POST.get('userEmail')
+            send_msg_stay_connected(email)
             return render(request, 'app_core/pages/faq.html', context)
     else:
         # Renderizar el template con ambos formularios
@@ -189,35 +171,32 @@ def faq(request):
 def contact(request):
     contact = Contact.objects.all().last()
     servicios = Service.objects.all()
-    testimonials = Testimonial.objects.all()
+    testimonials = Testimonial.objects.all().order_by('?')
     social_media = SocialMedia.objects.all()
     works = WorkImage.objects.all().order_by('?')[:1]
+    about = About.objects.all().last()
     context = {
         'servicios': servicios,
         'contact': contact,
+        'about': about,
         'testimonials': testimonials,
         'social_media': social_media,
         'works': works
     }
     if request.method == 'POST':
-        print(f"Veamos si entra en el metyhod post")
         if 'stay_connected' in request.POST:
-            username = request.POST.get('userName')
-            company = request.POST.get('companyName')
-            email = request.POST.get('email')
-
-            # y enviar el correo electrónico correspondiente
-            send_msg_stay_connected(username, company, email)
-            return render(request, 'app_core/pages/contact.html', context)
-        elif 'contact_us_form' in request.POST:
-            print(f"Veweamos si entyra aqui boton de contact us form")
-            username = request.POST.get('userName')
-            message = request.POST.get('userMessage')
             email = request.POST.get('userEmail')
+            send_msg_stay_connected(email)
+            return render(request, 'app_core/pages/contact.html', context)
 
-            # y enviar el correo electrónico correspondiente
-            send_msg_contact_us(username, message, email)
-            print(f"En este momentro el mensaje yua se envio")
+        elif 'contact_us_form' in request.POST:
+            username = request.POST.get('userName')
+            email = request.POST.get('userEmail')
+            phone = request.POST.get('userPhone')
+            message = request.POST.get('userMessage')
+            send_msg_contact_us(username, email, phone, message)
+            return render(request, 'app_core/pages/contact.html', context)
+        else:
             return render(request, 'app_core/pages/contact.html', context)
     else:
         # Renderizar el template con ambos formularios
@@ -230,40 +209,40 @@ def privacy(request):
     privacy = Privacy.objects.all().last()
     social_media = SocialMedia.objects.all()
     works = WorkImage.objects.all().order_by('?')[:1]
+    testimonials = Testimonial.objects.all().order_by('?')
+    partners = Partner.objects.all()
     context = {
         'contact': contact,
         'servicios': servicios,
         'privacy': privacy,
         'social_media': social_media,
-        'works': works
+        'works': works,
+        'testimonials': testimonials,
+        'partners': partners
     }
     if request.method == 'POST':
         if 'stay_connected' in request.POST:
-            username = request.POST.get('userName')
-            company = request.POST.get('companyName')
-            email = request.POST.get('email')
-
-            # y enviar el correo electrónico correspondiente
-            send_msg_stay_connected(username, company, email)
+            email = request.POST.get('userEmail')
+            send_msg_stay_connected(email)
             return render(request, 'app_core/pages/privacy.html', context)
     else:
         # Renderizar el template con ambos formularios
         return render(request, 'app_core/pages/privacy.html', context)
 
 
-def send_msg_stay_connected(username, company, email):
-    subject = 'Stay Connected M2J'
-    message = f'Hello, M2J you have a new subscriber: \nUsername: {username} \nCompany: {company} \nEmail: {email}.'
-    from_email = 'ideafix.mensajeria@gmail.com'
-    recipient_list = ['libardoentrenandolatinos@gmail.com']
+def send_msg_stay_connected(email):
+    subject = 'You got a subscribe message from A1 Builders website'
+    message = f'Hello A1 Builders! someone has contact you and wants to be a new subscriber: \n\nEmail: {email}.'
+    from_email = 'Roofing Messenger <roofing.messenger.service@gmail.com>'
+    recipient_list = ['camilobentrenandolatinos@gmail.com']
     send_mail(subject, message, from_email, recipient_list)
 
 
-def send_msg_contact_us(username, get_message, email):
-    subject = 'Contact Us M2J'
-    message = f'Hello, M2J you have a new message: \nUsername: {username} \nMessage: {get_message} \nEmail: {email}.'
-    from_email = 'ideafix.mensajeria@gmail.com'
-    recipient_list = ['libardoentrenandolatinos@gmail.com']
+def send_msg_contact_us(username, email, phone, get_message):
+    subject = 'You got a contact message from A1 Builders website'
+    message = f'Hello A1 Builders! you got a contact message from website: \n\nUsername: {username} \nEmail: {email} \nPhone: {phone} \n\nMessage: {get_message}'
+    from_email = 'Roofing Messenger <roofing.messenger.service@gmail.com>'
+    recipient_list = ['camilobentrenandolatinos@gmail.com']
     send_mail(subject, message, from_email, recipient_list)
 
 

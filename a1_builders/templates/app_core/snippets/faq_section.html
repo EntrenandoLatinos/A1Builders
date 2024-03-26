@@ -1,2 +1,33 @@
 {% load static %}
 
+<div class="section-full content-inner bg-white">
+    <div class="container">
+        <div class="section-head text-black text-left">
+            <h3>General Questions</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <div class="dlab-accordion faq-2 box-sort-in" id="accordion1">
+
+                    {% for faq in faqs %}
+                        <div class="panel">
+                            <div class="acod-head">
+                                <h6 class="acod-title">
+                                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#faq1"
+                                       class="collapsed" aria-expanded="true">
+                                        {{ faq.title }}</a></h6>
+                            </div>
+                            <div id="faq1" class="acod-body collapse" data-parent="#accordion1">
+                                <div class="acod-content">
+                                    {{ faq.description }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+            <!-- Faq Info END -->
+        </div>
+    </div>
+</div>

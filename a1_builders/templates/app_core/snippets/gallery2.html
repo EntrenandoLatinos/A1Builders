@@ -1,0 +1,56 @@
+{% load static %}
+
+<div class="bg-white lightgallery gallery-filters" id="lightgallery">
+    <div class="section-full content-inner-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 section-head text-center">
+                    <div class=" clearfix">
+                        <h2 class="title text-black">Our Works</h2>
+                    </div>
+                    <div class="dlab-separator-outer ">
+                        <div class="dlab-separator bg-primary style-icon text-white radius-xl"><i
+                                class="fa fa-leaf"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-12 text-center">
+
+                    <!-- <div class="site-filters style1 clearfix m-b20">
+                        <ul class="filters1" data-toggle="buttons">
+                            <li data-filter="" class="btn active"><input type="radio"><a href="javascript:void(0);"><span>All</span></a></li>
+                            <li data-filter="nature" class="btn"><input type="radio"><a href="javascript:void(0);"><span>Nature</span></a></li>
+                            <li data-filter="fashion" class="btn"><input type="radio"><a href="javascript:void(0);"><span>Fashion</span></a></li>
+                            <li data-filter="woman" class="btn"><input type="radio"><a href="javascript:void(0);"><span>Woman</span></a></li>
+                            <li data-filter="man" class="btn"><input type="radio"><a href="javascript:void(0);"><span>Man</span></a></li>
+                            <li data-filter="animal" class="btn"><input type="radio"><a href="javascript:void(0);"><span>Animal</span></a></li>
+                            <li data-filter="pet" class="btn"><input type="radio"><a href="javascript:void(0);"><span>Pet</span></a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="clearfix">
+                <ul id="masonry1" class="dlab-gallery-listing gallery text-center sp10">
+                    
+                    {% for work in works %}
+                        <li class="card-container m-b10 col-lg-6 nature">
+                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect">
+                                <img src="{{ work.image.url }}" alt="" width="800"
+                                     height="650"/>
+                                <div class="overlay-bx">
+                                    <div class="overlay-icon"> 
+                                    <span data-exthumbimage="{{ work.image.url }}"
+                                          data-src="{{ work.image.url }}"
+                                          class="check-km" title="{{ work.title }}">		
+                                        <i class="ti-zoom-in icon-bx-xs"></i> 
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                    	
+                    {% endfor %}
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

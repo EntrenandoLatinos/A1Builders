@@ -1,0 +1,39 @@
+{% load static %}
+
+<div class="content-block">
+    <!-- Privacy Policy -->
+    <div class="section-full content-inner inner-text">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12 section-head text-center">
+                    <div class="clearfix mb-2">
+                        {% if privacy.title %}
+                            <h2 class="title text-black">{{ privacy.title }}</h2>
+                        {% endif %}
+                    </div>
+                    <div class="dlab-separator-outer ">
+                        <div class="dlab-separator bg-primary style-icon text-white radius-xl"><i
+                                class="fa fa-leaf"></i></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 custom_list">
+                        {{ privacy.description|safe }}
+                    </div>
+                </div>
+
+                <div class="col-lg-12 section-head text-center">
+                    <div class="dlab-separator-outer ">
+                        <div class="dlab-separator bg-primary style-icon text-white radius-xl"><i
+                                class="fa fa-leaf"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Privacy Policy END -->
+</div>

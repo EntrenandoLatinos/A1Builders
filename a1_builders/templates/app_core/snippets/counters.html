@@ -1,2 +1,56 @@
 {% load static %}
 
+<div class="section-full overlay-black-dark bg-img-fix text-white content-inner"
+     style="background-image:url(static/app_core/images/background/bg1.jpg);">
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+
+                {% if indicators.title1 %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
+                        <div class="m-b30 dlab-box text-center counter-style-2">
+                            <div class="icon-lg "><i class="flaticon-factory"></i></div>
+                            <div class="counter text-red m-b5">{{ indicators.number1 }}</div>
+                            <span class="counter-text">{{ indicators.title1 }}</span>
+                        </div>
+                    </div>
+                {% endif %}
+                
+
+                {% if indicators.title2 %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
+                        <div class="m-b30 dlab-box text-center counter-style-2">
+                            <div class="icon-lg "><i class="flaticon-worker"></i></div>
+                            <div class="counter text-red m-b5">{{ indicators.number2 }}</div>
+                            <span class="counter-text">{{ indicators.title2 }}</span>
+                        </div>
+                    </div>
+                {% endif %}
+
+
+                {% if indicators.title3 %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
+                        <div class="m-b30 dlab-box text-center counter-style-2">
+                            <div class="icon-lg "><i class="flaticon-settings"></i></div>
+                            <div class="counter text-red m-b5">{{ indicators.number3 }}</div>
+                            <span class="counter-text">{{ indicators.title3 }}</span>
+                        </div>
+                    </div>
+                {% endif %}
+
+
+                {% if indicators.title4 %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
+                        <div class="m-b10 dlab-box text-center counter-style-2">
+                            <div class="icon-lg "><i class="flaticon-conveyor"></i></div>
+                            <div class="counter text-red m-b5">{{ indicators.number4 }}</div>
+                            <span class="counter-text">{{ indicators.title4 }}</span>
+                        </div>
+                    </div>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </div>
+</div>
