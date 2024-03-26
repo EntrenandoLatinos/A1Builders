@@ -8,47 +8,47 @@
 
 {% block content_banner %}
 
-<!-- start Header -->
+    <!-- start Header -->
     {% include 'app_core/snippets/banner.html' %}
-<!-- end Header -->
+    <!-- end Header -->
 
 {% endblock content_banner %}
 
 {% block content %}
 
-<!-- start About Us -->
+    <!-- start About Us -->
     {% include 'app_core/snippets/about_section.html' %}
-<!-- end About Us -->
+    <!-- end About Us -->
 
-<!-- start Social Media -->
+    <!-- start Social Media -->
     {% include 'app_core/snippets/social_media.html' %}
-<!-- end Social Media -->
+    <!-- end Social Media -->
 
-<!-- start Services -->
+    <!-- start Services -->
     {% include 'app_core/snippets/services3.html' %}
-<!-- end Services -->
+    <!-- end Services -->
 
-<!-- start Counters -->
-    {% include 'app_core/snippets/counters3.html' %}
-<!-- end Counters -->
+    <!-- start Counters -->
+    {% include 'app_core/snippets/counters.html' %}
+    <!-- end Counters -->
 
-<!-- start Gallery -->
+    <!-- start Gallery -->
     {% include 'app_core/snippets/gallery.html' %}
-<!-- end Gallery -->
+    <!-- end Gallery -->
 
-<!-- start Testimonios -->
+    <!-- start Testimonios -->
     {% include 'app_core/snippets/testimonials.html' %}
-<!-- end Testimonios -->
+    <!-- end Testimonios -->
 
-{% if about.image_google %}
-    <!-- start Google Business -->
+    {% if about.image_google %}
+        <!-- start Google Business -->
         {% include 'app_core/snippets/google_business.html' %}
-    <!-- end Google Business -->
-{% endif %}
+        <!-- end Google Business -->
+    {% endif %}
 
-<!-- start Partners -->
+    <!-- start Partners -->
     {% include 'app_core/snippets/partners.html' %}
-<!-- end Partners -->
+    <!-- end Partners -->
 
 {% endblock content %}
 

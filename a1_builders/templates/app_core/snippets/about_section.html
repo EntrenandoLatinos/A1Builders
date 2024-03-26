@@ -7,13 +7,15 @@
             <div class="col-lg-6 col-md-12 m-b30">
                 <div class="our-story">
                     <span>OUR COMPANY</span>
-                    <h2 class="title">Running a <br/>successful business <br/><span class="text-primary">since 2013</span></h2>
+                    <h2 class="title">Commited to <br/>High <br/> Quality <span class="text-primary">Service</span></h2>
                     <p style="text-align: justify">{{ about.about|safe }}</p>
                     <a href="{% url 'app_core:about' %}" class="site-button">Read More</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 m-b30 our-story-thum">
-                <img src="{{ about.image.url }}" class="radius-sm" alt="">
+                {% if about.image %}
+                	<img src="{{ about.image.url }}" class="radius-sm" alt="">
+                {% endif %}                 
             </div>
         </div>
     </div>

@@ -40,6 +40,13 @@
                         {% csrf_token %}
                         {{ work_form.media }}
                         <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Title <span class=""></span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                {{work_form.title}}
+                            </div>
+                        </div>
+                        <div class="item form-group">
                             <label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Image <span class="required"></span>
                             </label>
                             <div class="col-md-6 col-sm-6 ">
@@ -50,7 +57,7 @@
                         <div class="ln_solid"></div>
                         <div class="item form-group">
                             <div class="col-md-6 col-sm-6 offset-md-3">
-                                <button class="btn btn-primary" type="button">Cancel</button>
+                                <a class="btn btn-primary" type="button" href="{% url 'app_user:works' %}">Cancel</a>
                                 <button type="submit" class="btn btn-success">Submit</button>
                             </div>
                         </div>

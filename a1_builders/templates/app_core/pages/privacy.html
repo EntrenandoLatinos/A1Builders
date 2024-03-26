@@ -8,22 +8,44 @@
 
 {% block content %}
 
-<!-- start Banner Privacy -->
+    <!-- start Banner Privacy -->
     {% include 'app_core/snippets/banner_privacy.html' %}
-<!-- end Banner Privacy -->
+    <!-- end Banner Privacy -->
 
-<!-- start Privacy -->
-    {% include 'app_core/snippets/privacy_section.html' %}
-<!-- end Privacy -->
+    <!-- start Privacy -->
+    {% include 'app_core/snippets/privacy_section2.html' %}
+    <!-- end Privacy -->
 
-<!-- start Social Media -->
+    <!-- start Social Media -->
     {% include 'app_core/snippets/social_media.html' %}
-<!-- end Social Media -->
+    <!-- end Social Media -->
 
-<!-- start Partners -->
+    <!-- start Testimonios -->
+    {% include 'app_core/snippets/testimonials.html' %}
+    <!-- end Testimonios -->
+
+    <!-- start Partners -->
     {% include 'app_core/snippets/partners.html' %}
-<!-- end Partners -->
+    <!-- end Partners -->
 
 {% endblock content %}
 
-{% block extra_javascript %}{% endblock extra_javascript %}
+{% block extra_javascript %}
+    <script>
+        // Seleccionar todos los elementos con la clase "custom_list"
+        const customListElements = document.querySelectorAll('.custom_list');
+
+        // Iterar sobre cada elemento con la clase "custom_list"
+        customListElements.forEach((element) => {
+            // Seleccionar los elementos <ul> dentro del elemento actual con la clase "custom_list"
+            const ulElements = element.querySelectorAll('ul');
+
+            // Iterar sobre cada elemento <ul>
+            ulElements.forEach((ul) => {
+                //ul.classList.clean()
+                // Agregar la clase deseada al elemento <ul>
+                ul.classList.add('list-circle', 'primary', 'm-a0');
+            });
+        });
+    </script>
+{% endblock extra_javascript %}

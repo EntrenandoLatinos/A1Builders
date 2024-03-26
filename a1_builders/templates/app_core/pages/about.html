@@ -8,25 +8,32 @@
 
 {% block content %}
 
-<!-- start Banner About -->
+    <!-- start Banner About -->
     {% include 'app_core/snippets/banner_about.html' %}
-<!-- end Banner About -->
+    <!-- end Banner About -->
 
-<!-- start About Section -->
+    <!-- start About Section -->
     {% include 'app_core/snippets/about_section3.html' %}
-<!-- end About Section -->
+    <!-- end About Section -->
 
-<!-- start Service Sections -->
+    <!-- start Service Sections -->
+    {% comment %}
     {% include 'app_core/snippets/services_sections.html' %}
-<!-- end Service Sections -->
+    {% endcomment %}
+    <!-- end Service Sections -->
 
-<!-- start Social Media -->
+    <!-- start Social Media -->
     {% include 'app_core/snippets/social_media.html' %}
-<!-- end Social Media -->
+    <!-- end Social Media -->
 
-<!-- start Partners -->
+
+    <!-- start Testimonios -->
+    {% include 'app_core/snippets/testimonials.html' %}
+    <!-- end Testimonios -->
+
+    <!-- start Partners -->
     {% include 'app_core/snippets/partners.html' %}
-<!-- end Partners -->
+    <!-- end Partners -->
 
 {% endblock content %}
 

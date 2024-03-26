@@ -1,5 +1,6 @@
 from django import forms
-from app_core.models import Contact, Banner, About, Skill, Counter, Service, SubService, Testimonial, Partner, Faq, Privacy, WorkImage, SocialMedia
+from app_core.models import Contact, Banner, About, Skill, Counter, Service, SubService, Testimonial, Partner, Faq, \
+    Privacy, WorkImage, SocialMedia
 
 SOCIAL_MEDIA_CHOICES = [
     ('01', 'Facebook'),
@@ -71,6 +72,7 @@ FLATICON_ICONS_CHOICES = [
     ('50', 'flaticon-settings-2'),
 ]
 
+
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
@@ -81,9 +83,10 @@ class ContactForm(forms.ModelForm):
             'phone1': forms.TextInput(attrs={'class': 'form-control'}),
             'phone2': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control', 'type': 'email'}),
-            'latitude': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number' }),
+            'latitude': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'}),
             'longitude': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'}),
         }
+
 
 class BannerForm(forms.ModelForm):
     class Meta:
@@ -97,6 +100,7 @@ class BannerForm(forms.ModelForm):
             'insurance': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
+
 class AboutForm(forms.ModelForm):
     class Meta:
         model = About
@@ -104,6 +108,7 @@ class AboutForm(forms.ModelForm):
         widgets = {
             'url_google': forms.TextInput(attrs={'class': 'form-control', 'type': 'url'}),
         }
+
 
 class SkillForm(forms.ModelForm):
     class Meta:
@@ -118,10 +123,12 @@ class SkillForm(forms.ModelForm):
             'description3': forms.Textarea(attrs={'class': 'resizable_textarea form-control'}),
         }
 
+
 class CounterForm(forms.ModelForm):
     class Meta:
         model = Counter
-        fields = ['title1', 'number1', 'symbol1', 'title2', 'number2', 'symbol2', 'title3', 'number3', 'symbol3', 'title4', 'number4', 'symbol4']
+        fields = ['title1', 'number1', 'symbol1', 'title2', 'number2', 'symbol2', 'title3', 'number3', 'symbol3',
+                  'title4', 'number4', 'symbol4']
         widgets = {
             'title1': forms.TextInput(attrs={'class': 'form-control'}),
             'number1': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'}),
@@ -137,12 +144,14 @@ class CounterForm(forms.ModelForm):
             'symbol4': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
+
 class ServiceForm(forms.ModelForm):
     icon = forms.ChoiceField(
         choices=FLATICON_ICONS_CHOICES,
         label='Icon',
         widget=forms.Select(attrs={'class': 'form-control'})
     )
+
     class Meta:
         model = Service
         fields = ['image', 'image_large', 'icon', 'title', 'description', 'description_finish']
@@ -151,8 +160,10 @@ class ServiceForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
+
 class ServiceDeleteForm(forms.Form):
     id_to_delete = forms.IntegerField(widget=forms.HiddenInput())
+
 
 class SubServiceForm(forms.ModelForm):
     class Meta:
@@ -162,6 +173,7 @@ class SubServiceForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
+
 class TestimonialForm(forms.ModelForm):
     stars = forms.ChoiceField(
         choices=STARS_REVIEW_CHOICES,
@@ -169,19 +181,22 @@ class TestimonialForm(forms.ModelForm):
         required=True,
         widget=forms.Select(attrs={'class': 'form-control'})
     )
+
     class Meta:
         model = Testimonial
         fields = ['image', 'name', 'location', 'stars', 'url', 'description']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'location': forms.TextInput(attrs={'class': 'form-control', 'id':'position'}),
+            'location': forms.TextInput(attrs={'class': 'form-control', 'id': 'position'}),
             'stars': forms.Select(attrs={'class': 'form-control'}),
             'url': forms.TextInput(attrs={'class': 'form-control', 'type': 'url'}),
             'description': forms.Textarea(attrs={'class': 'resizable_textarea form-control'}),
         }
 
+
 class TestimonialDeleteForm(forms.Form):
     id_to_delete = forms.IntegerField(widget=forms.HiddenInput())
+
 
 class PartnerForm(forms.ModelForm):
     class Meta:
@@ -191,6 +206,7 @@ class PartnerForm(forms.ModelForm):
             'url': forms.TextInput(attrs={'class': 'form-control', 'type': 'url'}),
         }
 
+
 class FaqForm(forms.ModelForm):
     class Meta:
         model = Faq
@@ -198,6 +214,7 @@ class FaqForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
         }
+
 
 class PrivacyForm(forms.ModelForm):
     class Meta:
@@ -207,10 +224,15 @@ class PrivacyForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
+
 class WorkForm(forms.ModelForm):
     class Meta:
         model = WorkImage
-        fields = ['image']
+        fields = ['image', 'title']
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
 
 class SocialMediaForm(forms.ModelForm):
     name = forms.ChoiceField(
@@ -219,6 +241,7 @@ class SocialMediaForm(forms.ModelForm):
         required=True,
         widget=forms.Select(attrs={'class': 'form-control'})
     )
+
     class Meta:
         model = SocialMedia
         fields = ['name', 'url']

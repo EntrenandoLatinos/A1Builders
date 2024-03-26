@@ -293,9 +293,9 @@ p {
     line-height: 28px;
     margin-bottom: 24px;
 }
-strong {
-    font-weight: 400;
-}
+/*strong {*/
+/*    font-weight: 400;*/
+/*}*/
 .bg-primary,
 .bg-primary a:hover{ 
 	color:#fff; 
