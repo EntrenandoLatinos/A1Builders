@@ -42,25 +42,32 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.4s">
                     <div class="widget">
-                        <h6 class="m-b20 text-white font-weight-300 text-uppercase">Newsletter</h6>
+                        <h6 class="m-b20 text-white font-weight-300 text-uppercase">Subscribe</h6>
                         <div class="subscribe-form m-b20 m-t30">
-                            <form class="dzSubscribe" action="script/mailchamp.php" method="post">
-                                <div class="dzSubscribeMsg"></div>
+                            <form method="post">
+                                {% csrf_token %}
                                 <div class="input-group">
-                                    <input name="dzEmail" required="required" class="form-control radius-no" placeholder="Your Email Id" type="email">
+                                    <input name="userEmail" class="form-control radius-no" placeholder="Your Email"
+                                           type="email" required>
                                     <span class="input-group-btn">
-                                        <button name="submit" value="Submit" type="submit" class="site-button btnhover20 radius-no">SEND</button>
-                                    </span> 
+                                        <button name="stay_connected" type="submit"
+                                                class="site-button btnhover20 radius-no">SEND</button>
+                                    </span>
                                 </div>
                             </form>
                         </div>
                         <h6 class="m-b10 text-white font-weight-300 text-uppercase">Connect with us</h6>
                         <ul class="list-inline m-a0">
-                            <li><a href="javascript:void(0);" class="site-button btnhover20 facebook sharp"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="javascript:void(0);" class="site-button btnhover20 google-plus sharp"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="javascript:void(0);" class="site-button btnhover20 linkedin sharp"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="javascript:void(0);" class="site-button btnhover20 instagram sharp"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="javascript:void(0);" class="site-button btnhover20 twitter sharp"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 facebook sharp"><i
+                                    class="fa fa-facebook"></i></a></li>
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 google-plus sharp"><i
+                                    class="fa fa-google-plus"></i></a></li>
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 linkedin sharp"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 instagram sharp"><i
+                                    class="fa fa-instagram"></i></a></li>
+                            <li><a href="javascript:void(0);" class="site-button btnhover20 twitter sharp"><i
+                                    class="fa fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,9 +83,10 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row" style="padding: 10px 0;">
-                <div class="col-md-6 col-sm-6 text-left "> <span>Copyright © <span id="yearValue"></span><a href="javascript:;">A1 Builders</a> all rights reserved.</span> </div>
-                <div class="col-md-6 col-sm-6 text-right "> 
-                    <div class="widget-link "> 
+                <div class="col-md-6 col-sm-6 text-left "><span>Copyright © <span id="yearValue"></span><a
+                        href="javascript:;">A1 Builders</a> all rights reserved.</span></div>
+                <div class="col-md-6 col-sm-6 text-right ">
+                    <div class="widget-link ">
                         <ul>
                         </ul>
                     </div>
