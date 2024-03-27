@@ -6,12 +6,12 @@ __pycache__/
 .idea/
 
 #App migrations, media folders, settings
-a1_builders/app_core/migrations/
-a1_builders/app_user/migrations/
-a1_builders/media/
-a1_builders/static/
-a1_builders/static/
-a1_builders/settings/development.py
+# a1_builders/app_core/migrations/
+# a1_builders/app_user/migrations/
+# a1_builders/media/
+# a1_builders/static/
+# a1_builders/static/
+# a1_builders/settings/development.py
 
 # Archivos de migraciones
 migrations/*
